@@ -134,6 +134,5 @@ _atab params ["_table", "_rangeMin", "_rangeMax", "_heightMin", "_heightMax", "_
   ] call InterpolateSlices;
 
   _rs = [round(_solution # 0 *17.77777778), _solution # 2, _solution # 4, _solution # 5, _solution # 6, _solution # 1, _solution # 3];
-  player sideChat str _rs;
   _rs
 };

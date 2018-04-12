@@ -1,3 +1,4 @@
 //#include "CfgFunctions.hpp"
 #include "UI\ControlBaseClasses.hpp"
 #include "UI\BCS\dialog.hpp"
+#include "UI\tablet.hpp"

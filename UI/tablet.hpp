@@ -1,0 +1,127 @@
+#include "BCS\BCS_idc_defines.hpp"
+
+class itc_land_tablet {
+	idd = 32562;
+  controlsBackground[] = {
+      workspace_background,
+      workspace_header_bar,
+      sidebar_background,
+      workspace_background,
+      screen_image
+  };
+  objects[] = { };
+  onLoad = "[(_this select 0), vehicle player, ""test""] call itc_land_tablet_fnc_open";
+  controls[]=
+  {
+    header1,
+    header2,
+    sidebar_button1,
+    sidebar_button2,
+    sidebar_button3,
+    sidebar_button4,
+
+    fcs_target_pos,fcs_target_elev,fcs_calc,fcs_results,fcs_edit_target_pos,fcs_edit_target_el,fcs_target_title,fcs_gun_title,fcs_gun_dir,fcs_gun_df,fcs_gun_el,fcs_gun_dir_disp,fcs_gun_df_disp,fcs_gun_el_disp,fcs_gun_sh,fcs_gun_sh_disp,fcs_gun_stat,fcs_gun_stat_disp,fcs_gun_rem,fcs_gun_rem_disp,fcs_next,fcs_prev
+  };
+  class workspace_header_bar: ITC_ARTY_RscText {
+    idc = 15103;
+    x = (0.396875 + POSXADJUST) * safezoneW + safezoneX;
+    y = (0.247 + POSYADJUST) * safezoneH + safezoneY;
+    w = (0.299062 + WSWADJUST) * safezoneW;
+    h = 0.044 * safezoneH;
+    colorBackground[] = {0.1,0.1,0.1,1};
+    colorActive[] = {0.1,0.1,0.1,1};
+
+  };
+  class header1: ITC_ARTY_RscText {
+    idc = 15106;
+    text = "FDC SUITE";
+    x = (0.31+ POSXADJUST) * safezoneW + safezoneX;
+    y = (0.26+ POSYADJUST) * safezoneH + safezoneY;
+    w = 0.0928125 * safezoneW;
+    h = 0.022 * safezoneH;
+
+    sizeEx = 1.75 * GUI_GRID_H;
+  };
+  class header2: ITC_ARTY_RscText {
+    idc = 15105;
+    text = "ILS - AIFMS";
+    x = (0.31+ POSXADJUST) * safezoneW + safezoneX;
+    y = (0.285+ POSYADJUST) * safezoneH + safezoneY;
+    w = 0.0928125 * safezoneW;
+    h = 0.022 * safezoneH;
+
+    sizeEx = 1.25 * GUI_GRID_H;
+  };
+  class screen_image: ITC_ARTY_RscPicture
+  {
+      idc = 15107;
+      text = "seconddraft.paa";
+			h = 0.86*SafeZoneW;
+			w = 0.64*SafeZoneW;
+			x = 0.5-((0.64*SafeZoneW)/2);
+			y = 0.5-((1.03*SafeZoneW)/2);
+			style = ST_PICTURE;
+  };
+  class sidebar_background: ITC_ARTY_RscText {
+    idc = 15101;
+    x = (0.304062+ POSXADJUST) * safezoneW + safezoneX;
+    y = (0.247+ POSYADJUST) * safezoneH + safezoneY;
+    w = 0.0928125 * safezoneW;
+    h = (0.506 + WSHADJUST) * safezoneH;
+    colorBackground[] = {0.1,0.1,0.1,1};
+    colorActive[] = {0.1,0.1,0.1,1};
+
+  };
+  class workspace_background: ITC_ARTY_RscText {
+    idc = 15102;
+    x = (0.396875+ POSXADJUST) * safezoneW + safezoneX;
+    y = (0.247+ POSYADJUST) * safezoneH + safezoneY;
+    w = (0.299062 + WSWADJUST) * safezoneW;
+    h = (0.506 + WSHADJUST) * safezoneH;
+    colorBackground[] = {0.125,0.125,0.125,1};
+    colorActive[] = {0.125,0.125,0.125,1};
+  };
+  class sidebar_button1: ITC_ARTY_RscButton {
+    idc = 15108;
+    text = "Page 1";
+    x = (0.304062+ POSXADJUST) * safezoneW + safezoneX;
+    y = (0.313+ POSYADJUST) * safezoneH + safezoneY;
+    w = 0.0928125 * safezoneW;
+    h = 0.022 * safezoneH;
+    colorBackground[] = {0,0,0,0.9};
+    colorActive[] = {0.1,0.1,0.1,0.9};
+  };
+  class sidebar_button2: ITC_ARTY_RscButton {
+    idc = 15109;
+    text = "Page 2";
+    x = (0.304062+ POSXADJUST) * safezoneW + safezoneX;
+    y = (0.335+ POSYADJUST) * safezoneH + safezoneY;
+    w = 0.0928125 * safezoneW;
+    h = 0.022 * safezoneH;
+    colorBackground[] = {0,0,0,0.9};
+    colorActive[] = {0.1,0.1,0.1,0.9};
+
+  };
+  class sidebar_button3: ITC_ARTY_RscButton {
+    idc = 15110;
+    text = "Page 3";
+    x = (0.304062+ POSXADJUST) * safezoneW + safezoneX;
+    y = (0.357+ POSYADJUST) * safezoneH + safezoneY;
+    w = 0.0928125 * safezoneW;
+    h = 0.022 * safezoneH;
+    colorBackground[] = {0,0,0,0.9};
+    colorActive[] = {0.1,0.1,0.1,0.9};
+
+  };
+  class sidebar_button4: ITC_ARTY_RscButton {
+    idc = 15111;
+    text = "Page 4";
+    x = (0.304062+ POSXADJUST) * safezoneW + safezoneX;
+    y = (0.379+ POSYADJUST) * safezoneH + safezoneY;
+    w = 0.0928125 * safezoneW;
+    h = 0.022 * safezoneH;
+    colorBackground[] = {0,0,0,0.9};
+    colorActive[] = {0.1,0.1,0.1,0.9};
+  };
+  #include "workspace_fcs.hpp"
+};
