@@ -23,7 +23,7 @@ class ITC_ARTY_BCSDialog {
 		fire_mission_list
 	};*/
 	objects[] = {};
-	//onLoad = "[_this] spawn SA_fnc_onGunnersDialogOpen";
+	onLoad = "[] spawn itc_land_aifms_bcs_fnc_onLoad";
 	//onUnload = "SA_GunnersDialogOpen = false";
 	class Controls {
 		//Main Workspace	
@@ -57,8 +57,7 @@ class ITC_ARTY_BCSDialog {
 			colorActive[] = {0.1,0.1,0.1,1};
 			
 		};	
-		class workspace_header: ITC_ARTY_RscText
-		{
+		class workspace_header: ITC_ARTY_RscText {
 			idc = 15104;
 			text = "Workspace Header"; 
 			x = (0.402031 + POSXADJUST) * safezoneW + safezoneX;
@@ -99,7 +98,7 @@ class ITC_ARTY_BCSDialog {
 			h = 0.022 * safezoneH;
 			colorBackground[] = {0,0,0,0.9};
 			colorActive[] = {0.1,0.1,0.1,0.9};
-
+			action = "['BCS Settings',IDC_Array_Workspace_Header+IDC_Array_BCS_Settings] spawn itc_land_aifms_bcs_fnc_sidebarButton";
 		};
 		class bty_setup_button: ITC_ARTY_RscButton {
 			idc = 15109;
@@ -133,7 +132,7 @@ class ITC_ARTY_BCSDialog {
 			colorBackground[] = {0,0,0,0.9};
 			colorActive[] = {0.1,0.1,0.1,0.9};
 
-		};
+		};  /*
 		class direct_fire_button: ITC_ARTY_RscButton {
 			idc = 15112;
 			text = "Direct Fire";
@@ -144,7 +143,7 @@ class ITC_ARTY_BCSDialog {
 			colorBackground[] = {0,0,0,0.9};
 			colorActive[] = {0.1,0.1,0.1,0.9};
 
-		};
+		}; */
 		class new_fire_mission_button: ITC_ARTY_RscButton {
 			idc = 15113;
 			text = "New Fire Mission";
@@ -167,9 +166,9 @@ class ITC_ARTY_BCSDialog {
 
 		};		
 		//BCS Settings Workspace
-		//#include "BCSSettings_Workspace.hpp"
+		#include "BCSSettings_Workspace.hpp"
 		//BTY Setup Workspace
-		//#include "BTYSetup_Workspace.hpp"
+		#include "BTYSetup_Workspace.hpp"
 		//LOC Stores Workspace
 		#include "LOCStores_Workspace.hpp"		
 		class screen_image: ITC_ARTY_RscPicture {

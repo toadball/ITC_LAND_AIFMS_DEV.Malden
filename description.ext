@@ -1,2 +1,3 @@
-#include "UI\dialogs.hpp"
+//#include "CfgFunctions.hpp"
+#include "UI\ControlBaseClasses.hpp"
 #include "UI\BCS\dialog.hpp"
