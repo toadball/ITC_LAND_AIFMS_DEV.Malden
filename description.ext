@@ -1,0 +1,2 @@
+#include "UI\dialogs.hpp"
+#include "UI\BCS\dialog.hpp"
