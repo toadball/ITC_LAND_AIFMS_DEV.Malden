@@ -15,12 +15,14 @@ class itc_land_tablet {
   {
     header1,
     header2,
+
+		fcsControls,
+		vehicleStatus,
+
     sidebar_button1,
     sidebar_button2,
     sidebar_button3,
     sidebar_button4,
-
-    fcs_target_pos,fcs_target_elev,fcs_calc,fcs_results,fcs_edit_target_pos,fcs_edit_target_el,fcs_target_title,fcs_gun_title,fcs_gun_dir,fcs_gun_df,fcs_gun_el,fcs_gun_dir_disp,fcs_gun_df_disp,fcs_gun_el_disp,fcs_gun_sh,fcs_gun_sh_disp,fcs_gun_stat,fcs_gun_stat_disp,fcs_gun_rem,fcs_gun_rem_disp,fcs_next,fcs_prev
   };
   class workspace_header_bar: ITC_ARTY_RscText {
     idc = 15103;
@@ -90,6 +92,7 @@ class itc_land_tablet {
     h = 0.022 * safezoneH;
     colorBackground[] = {0,0,0,0.9};
     colorActive[] = {0.1,0.1,0.1,0.9};
+		action = "[""side1""] call itc_land_tablet_fnc_interact";
   };
   class sidebar_button2: ITC_ARTY_RscButton {
     idc = 15109;
@@ -100,7 +103,7 @@ class itc_land_tablet {
     h = 0.022 * safezoneH;
     colorBackground[] = {0,0,0,0.9};
     colorActive[] = {0.1,0.1,0.1,0.9};
-
+		action = "[""side2""] call itc_land_tablet_fnc_interact";
   };
   class sidebar_button3: ITC_ARTY_RscButton {
     idc = 15110;
@@ -111,7 +114,7 @@ class itc_land_tablet {
     h = 0.022 * safezoneH;
     colorBackground[] = {0,0,0,0.9};
     colorActive[] = {0.1,0.1,0.1,0.9};
-
+		action = "[""side3""] call itc_land_tablet_fnc_interact";
   };
   class sidebar_button4: ITC_ARTY_RscButton {
     idc = 15111;
@@ -122,6 +125,8 @@ class itc_land_tablet {
     h = 0.022 * safezoneH;
     colorBackground[] = {0,0,0,0.9};
     colorActive[] = {0.1,0.1,0.1,0.9};
+		action = "[""side4""] call itc_land_tablet_fnc_interact";
   };
   #include "workspace_fcs.hpp"
+  #include "workspace_status.hpp"
 };

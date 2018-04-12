@@ -2,12 +2,20 @@
 
 
 itc_land_tablet_fnc_open = compile preprocessFileLineNumbers "Functions\tablet\open.sqf";
+itc_land_tablet_fnc_interact = compile preprocessFileLineNumbers "Functions\tablet\interact.sqf";
+
 itc_land_tablet_fnc_vehicle_init = compile preprocessFileLineNumbers "Functions\tablet\apps\vehicleManage\init.sqf";
+itc_land_tablet_fnc_vehicle_clear = compile preprocessFileLineNumbers "Functions\tablet\apps\vehicleManage\clear.sqf";
 itc_land_tablet_fnc_vehicle_render = compile preprocessFileLineNumbers "Functions\tablet\apps\vehicleManage\render.sqf";
 itc_land_tablet_fnc_vehicle_interact = compile preprocessFileLineNumbers "Functions\tablet\apps\vehicleManage\interact.sqf";
+
 itc_land_tablet_fnc_vehicle_fcs_init = compile preprocessFileLineNumbers "Functions\tablet\apps\vehicleManage\fcs\init.sqf";
 itc_land_tablet_fnc_vehicle_fcs_render = compile preprocessFileLineNumbers "Functions\tablet\apps\vehicleManage\fcs\render.sqf";
 itc_land_tablet_fnc_vehicle_fcs_interact = compile preprocessFileLineNumbers "Functions\tablet\apps\vehicleManage\fcs\interact.sqf";
+
+itc_land_tablet_fnc_vehicle_status_init = compile preprocessFileLineNumbers "Functions\tablet\apps\vehicleManage\status\init.sqf";
+itc_land_tablet_fnc_vehicle_status_render = compile preprocessFileLineNumbers "Functions\tablet\apps\vehicleManage\status\render.sqf";
+itc_land_tablet_fnc_vehicle_status_interact = compile preprocessFileLineNumbers "Functions\tablet\apps\vehicleManage\status\interact.sqf";
 
 itc_land_tablet_utils_fnc_setText = compile preprocessFileLineNumbers "Functions\tablet\util\setText.sqf";
 itc_land_tablet_utils_fnc_setFade = compile preprocessFileLineNumbers "Functions\tablet\util\setFade.sqf";
@@ -31,7 +39,7 @@ itc_land_bcs_fnc_getAllSolutions = {
 
   _dir = getDir _gun / 360 * 6400;
   _relDir = (_gun getDir _pos) / 360 * 6400;
-  _df = 3200 - _relDir - _dir;
+  _df = 3200 - (_relDir - _dir);
 
 
   _solutions = [];
